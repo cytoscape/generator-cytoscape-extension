@@ -1,0 +1,25 @@
+{
+  "name": "generator-cytoscapeext",
+  "version": "0.1.0",
+  "description": "A Cytoscape.js extension generator for Yeoman",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cytoscape/generator-cytoscapeext.git"
+  },
+  "keywords": [
+    "TODO-yeoman-generator-TODO"
+  ],
+  "author": "Max Franz",
+  "license": "LGPL3+",
+  "bugs": {
+    "url": "https://github.com/cytoscape/generator-cytoscapeext/issues"
+  },
+  "homepage": "https://github.com/cytoscape/generator-cytoscapeext",
+  "dependencies": {
+    "mustache": "^0.8.2",
+    "yeoman-generator": "^0.17.7"
+  }
+}
