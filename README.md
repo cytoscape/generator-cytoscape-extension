@@ -1,5 +1,5 @@
-generator-cytoscapeext
-======================
+generator-cytoscape-extension
+=============================
 
 A Cytoscape.js extension generator for Yeoman
 
