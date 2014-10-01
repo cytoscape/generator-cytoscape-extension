@@ -10,7 +10,7 @@
     "url": "https://github.com/cytoscape/generator-cytoscape-extension.git"
   },
   "keywords": [
-    "TODO-yeoman-generator-TODO"
+    "yeoman-generator"
   ],
   "author": "Max Franz",
   "license": "LGPL3+",
