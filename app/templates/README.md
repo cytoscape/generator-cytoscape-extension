@@ -18,7 +18,7 @@
 Please briefly describe your API here:
 
 ```js
-cy.myextension({
+cy.{{name}}({
   foo: 'bar', // some option that does this
   baz: 'bat' // some options that does that
   // ... and so on
@@ -28,8 +28,8 @@ cy.myextension({
 
 ## Publishing instructions
 
-This project is set up to automatically be published to npm and bower.  Follow these instructions for 
+This project is set up to automatically be published to npm and bower.  To publish:
 
-1. Set the version number env var: `export VERSION=1.2.3`
+1. Set the version number environment variable: `export VERSION=1.2.3`
 1. Publish: `gulp`
-1. If publishing to bower for the first time, you'll need to run `bower register {{fullName}} https://github.com/{{githubProj}}.git`
+1. If publishing to bower for the first time, you'll need to run `bower register {{fullName}} https://github.com/{{{githubProj}}}.git`

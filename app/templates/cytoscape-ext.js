@@ -1,42 +1,42 @@
-;(function( $, $$ ){ 'use strict';
-  
-  // if you need jquery (if not, then you can remove this block and the refs in the outer callback)
-  if( !$ ){
-    try {
-      $ = require('jquery');
-    } catch(e){
-      console.error('Cytoscape extension tried to pull in `jquery` via require() but failed');
-    }
+;(function(){ 'use strict';
+
+  // registers the extension on a cytoscape lib ref
+  var register = function( cytoscape ){
+    if( !cytoscape ){ return; } // can't register if cytoscape unspecified
+
+    // if you want a collection extension
+    $$('collection', '{{name}}', function( options ){ // could use options object, but args are up to you
+      var eles = this;
+      var cy = this.cy();
+      
+      // your extension impl...
+
+      return this; // chainability
+    });
+
+    // if you want a core extension
+    $$('core', '{{name}}', function( options ){ // could use options object, but args are up to you
+      var cy = this;
+
+      // your extension impl...
+
+      return this; // chainability
+    });
+
+  };
+
+  if( typeof module !== 'undefined' && module.exports ){ // expose as a commonjs module
+    module.exports = register;
   }
 
-  if( !$$ ){
-    try {
-      $$ = require('cytoscape');
-    } catch(e){
-      console.error('Cytoscape extension tried to pull in `cytoscape` via require() but failed');
-    }
+  if( typeof define !== 'undefined' && define.amd ){ // expose as an amd/requirejs module
+    define('{{fullName}}', function(){
+      return register;
+    });
   }
 
-  // if you want a collection extension
-  $$('collection', '{{name}}', function( options ){
-    var eles = this;
-    var cy = this.cy();
-    
-    // extension impl...
+  if( typeof cytoscape !== 'undefined' ){ // expose to global cytoscape (i.e. window.cytoscape)
+    register( cytoscape );
+  }
 
-    return this; // chainability
-    
-  });
-
-  // if you want a core extension
-  $$('core', 'qtip', function( options ){
-    var cy = this;
-    var container = cy.container();
-
-    // extension impl...
-
-    return this; // chainability
-    
-  });
-  
-})( jQuery, cytoscape );
+})();

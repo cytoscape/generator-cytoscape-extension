@@ -5,7 +5,7 @@
   "main": "{{fullName}}.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/{{githubProj}}.git"
+    "url": "https://github.com/{{{githubProj}}}.git"
   },
   "ignore": [
     "**/.*",

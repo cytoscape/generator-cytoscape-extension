@@ -91,7 +91,7 @@ module.exports = yeoman.generators.Base.extend({
   // Where installation are run (npm, bower)
   install: {
     addDeps: function(){
-      this.log('Installing npm dependencies...');
+      //this.log('Installing npm dependencies...');
 
       this.npmInstall();
     }
@@ -103,6 +103,7 @@ module.exports = yeoman.generators.Base.extend({
       fs.renameSync( './cytoscape-ext.js', options.fullName + '.js' ); // clean up ext file name
       
       this.log('Cytoscape extension creation complete');
+      this.log('Now installing npm dependencies...');
     }
   }
 });
