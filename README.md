@@ -10,6 +10,7 @@ A Cytoscape.js extension generator for Yeoman
 1. Clone the repository on your machine.
 1. Open the terminal and `cd` to the directory of your cloned repository.
 1. Install Yeoman if you haven't already: `sudo npm install -g yo`
+1. Install the generator: `npm install generator-cytoscape-extension`
 1. Run the extension generator: `yo cytoscape-extension`
 1. Follow the prompts to create the scaffolding for your extension.
 1. Write your extension in the generated `cytoscape-{{your-ext-name}}.js` file.
