@@ -11,7 +11,8 @@ var runSequence = require('run-sequence');
 var prompt = require('gulp-prompt');
 var version;
 
-gulp.task('default', ['publish'], function( next ){
+gulp.task('default', [], function( next ){
+  console.log('You must explicitly call `gulp publish` to publish the extension');
   next();
 });
 
