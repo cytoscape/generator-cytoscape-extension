@@ -13,6 +13,31 @@
  * <List your dependencies here please>
 
 
+## Usage instructions
+
+Download the library:
+ * via npm: `npm install {{fullName}}`,
+ * via bower: `bower install {{fullName}}`, or
+ * via direct download in the repository (probably from a tag).
+
+`require()` the library as appropriate for your project:
+
+CommonJS:
+```js
+var cytoscape = require('cytoscape');
+var {{name}} = require('{{name}}')( cytoscape ); // register extension
+```
+
+AMD:
+```js
+require(['cytoscape', '{{name}}'], function( cytoscape, {{name}} ){
+  name( cytoscape ); // register extension
+});
+```
+
+Plain HTML/JS has the extension registered for you automatically, because no `require()` is needed.
+
+
 ## API
 
 Please briefly describe your API here:

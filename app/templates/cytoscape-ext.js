@@ -5,7 +5,7 @@
     if( !cytoscape ){ return; } // can't register if cytoscape unspecified
 
     // if you want a collection extension
-    $$('collection', '{{name}}', function( options ){ // could use options object, but args are up to you
+    cytoscape('collection', '{{name}}', function( options ){ // could use options object, but args are up to you
       var eles = this;
       var cy = this.cy();
       
@@ -15,7 +15,7 @@
     });
 
     // if you want a core extension
-    $$('core', '{{name}}', function( options ){ // could use options object, but args are up to you
+    cytoscape('core', '{{name}}', function( options ){ // could use options object, but args are up to you
       var cy = this;
 
       // your extension impl...
